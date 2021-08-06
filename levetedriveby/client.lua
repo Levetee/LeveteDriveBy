@@ -1,5 +1,5 @@
 
-local passengerDriveBy = true
+local PassengerShooting = true
 
 
 Citizen.CreateThread(function()
@@ -11,7 +11,7 @@ Citizen.CreateThread(function()
 		if car then
 			if GetPedInVehicleSeat(car, -1) == playerPed then
 				SetPlayerCanDoDriveBy(PlayerId(), false)
-			elseif passengerDriveBy then
+			elseif PassengerShooting then
 				SetPlayerCanDoDriveBy(PlayerId(), true)
 			else
 				SetPlayerCanDoDriveBy(PlayerId(), false)
